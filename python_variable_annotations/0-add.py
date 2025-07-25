@@ -8,6 +8,7 @@ It exports a single function:
 Intended for basic arithmetic operations or as a utility function in larger programs.
 """
 
+
 def add(a: float, b: float) -> float:
     """Return the sum of a and b.
 
