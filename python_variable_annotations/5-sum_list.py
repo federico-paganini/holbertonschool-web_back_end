@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+from typing import List
 """A module to sum a list of numbers using type annotations."""
 
 
-def sum_list(nums: list[float]) -> float:
+def sum_list(nums: List[float]) -> float:
     """
     Sums a list of numbers.
 
