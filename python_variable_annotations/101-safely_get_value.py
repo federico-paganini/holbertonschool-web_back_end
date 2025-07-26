@@ -8,7 +8,7 @@ from typing import Any, Mapping, Union, TypeVar
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, None]) -> Union[T, Any]:
+def safely_get_value(dct: Mapping, key: Any, default: Union[T, None]) -> Union[Any, T]:
     """
     Safely retrieves a value from a dictionary.
     If the key is not found, returns the default value.
@@ -17,7 +17,8 @@ def safely_get_value(dct: Mapping, key: Any, default: Union[T, None]) -> Union[T
         key (Any): The key to look for in the dictionary.
         default (Union[T, None]): The value to return if the key is not found.
     Returns:
-        Union[T, Any]: The value associated with the key if found, otherwise the default value.
+        Union[T, Any]: The value associated with the key
+        if found, otherwise the default value.
     """
     if key in dct:
         return dct[key]
