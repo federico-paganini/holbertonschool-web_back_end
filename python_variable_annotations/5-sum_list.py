@@ -1,6 +1,25 @@
 #!/usr/bin/env python3
-from typing import List
-"""A module to sum a list of numbers using type annotations."""
+"""
+A module to sum a list of numbers using type annotations.
+
+This module provides a function to calculate the sum of
+a list of floating-point numbers.
+
+It demonstrates the use of Python's type annotations for
+improved code clarity and static analysis.
+
+    Calculate the sum of a list of floating-point numbers.
+
+    Args:
+        nums (List[float]): A list containing float values to be summed.
+
+    Returns:
+        float: The total sum of all numbers in the input list.
+
+    Example:
+        >>> sum_list([1.0, 2.5, 3.5])
+        7.0
+"""
 
 
 def sum_list(nums: List[float]) -> float:
