@@ -7,6 +7,7 @@ it multiplied by the given multiplier.
 """
 from typing import Callable
 
+
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
     Create a multiplier function that multiplies its
