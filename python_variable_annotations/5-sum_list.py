@@ -1,4 +1,4 @@
-#!/usr/bin/env Python3
+#!/usr/bin/env python3
 """A module to sum a list of numbers using type annotations."""
 
 
