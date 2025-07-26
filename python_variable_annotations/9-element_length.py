@@ -5,10 +5,10 @@ This module defines a function that takes a list
 of strings and returns a list of tuples,
 where each tuple contains a string and its length.
 """
-from typing import List, Tuple
+from typing import List, Tuple, Sequence, Iterable
 
 
-def element_length(lst: List[str]) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[str, int]]:
     """
     Takes a list of strings and returns a list of tuples
     where each tuple contains a string and its length.
