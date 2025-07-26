@@ -9,13 +9,15 @@ from typing import Callable
 
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
-    Create a multiplier function that multiplies its input by the given multiplier.
+    Create a multiplier function that multiplies its
+    input by the given multiplier.
 
     Args:
         multiplier (float): The multiplier to apply.
 
     Returns:
-        function: A function that takes a number and returns it multiplied by the multiplier.
+        function: A function that takes a number and returns
+        it multiplied by the multiplier.
     """
     def multiply(value: float) -> float:
         return value * multiplier
