@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 This module defines a function to_kv that takes a key and a value,
-squares the value, and returns a tuple containing the key and the squared value.
+squares the value, and returns a tuple
+containing the key and the squared value.
 """
 from typing import Tuple, Union
 
