@@ -5,10 +5,10 @@ This module provides a function to safely retrieve
 the first element of a list,
 returning None if the list is empty.
 """
-from typing import List, Any, Optional
+from typing import Sequence, Any, Optional
 
 
-def safe_first_element(lst: List[Any]) -> Optional[Any]:
+def safe_first_element(lst: Sequence[Any]) -> Optional[Any]:
     """
     Returns the first element of a list if it exists,
     otherwise returns None.
