@@ -20,6 +20,7 @@ improved code clarity and static analysis.
         >>> sum_list([1.0, 2.5, 3.5])
         7.0
 """
+from typing import List
 
 
 def sum_list(nums: List[float]) -> float:
