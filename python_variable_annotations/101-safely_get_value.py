@@ -5,10 +5,12 @@ using a specified key, returning a default value if the key is not found.
 """
 from typing import Any, Mapping, Union, TypeVar
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, None]) -> Union[Any, T]:
+def safely_get_value(
+    dct: Mapping, key: Any, default: Union[T, None]
+) -> Union[Any, T]:
     """
     Safely retrieves a value from a dictionary.
     If the key is not found, returns the default value.
