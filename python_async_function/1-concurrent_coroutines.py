@@ -1,3 +1,4 @@
+#!/usr/bin/env/ python3
 """
 This module provides a coroutine that executes multiple asynchronous delays in parallel.
 
