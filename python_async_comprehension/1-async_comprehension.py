@@ -17,8 +17,5 @@ async def async_comprehension() -> List[float]:
         List[float]: A list of 10 floats yielded
         by the asynchronous generator.
     """
-    results = []
-    async for values in async_generator():
-        results.append(values)
-
+    results = [values async for values in async_generator()]
     return results
