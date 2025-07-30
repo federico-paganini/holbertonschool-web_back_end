@@ -16,7 +16,7 @@ from typing import List
 task_wait_random = __import__("3-tasks").task_wait_random
 
 
-async def task_wait_n(n: int, max_delay: int) -> List[asyncio.Task]:
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
     Create and run `n` asyncio.Tasks by calling `task_wait_random` with
     `max_delay`, wait for their completion in order of finishing, and
