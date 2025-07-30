@@ -15,13 +15,8 @@ async def measure_runtime() -> float:
     Returns:
         float: The total elapsed time in seconds.
     """
+    tasks = [async_comprehension() for _ in range(4)]
     start_time = time.perf_counter()
-    await gather(
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-    )
+    await gather(*tasks)
     end_time = time.perf_counter()
-
     return end_time - start_time
