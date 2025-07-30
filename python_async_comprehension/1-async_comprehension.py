@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-from typing import List
-import asyncio
 """
 Module: 1-async_comprehension
 Consumes values from an asynchronous generator and returns them as a list.
 """
+from typing import List
+import asyncio
 async_generator = __import__("0-async_generator").async_generator
 
 
