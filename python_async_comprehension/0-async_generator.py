@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-from typing import Generator
-import random
-import asyncio
 """
 This module defines an asynchronous generator that yields random numbers
 after asynchronously waiting for 1 second on each iteration.
@@ -12,6 +9,9 @@ It can be used to simulate a stream of random data in an asynchronous context.
 It can be useful for testing asynchronous code that processes streams of data.
 It is designed to be used with `async for` to consume the generated values.
 """
+from typing import Generator
+import random
+import asyncio
 
 
 async def async_generator() -> Generator[float, None, None]:
