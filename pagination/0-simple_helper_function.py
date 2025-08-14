@@ -8,6 +8,7 @@ commonly used in paginated data retrieval. It is designed to be
 simple, clear, and reusable across different projects.
 """
 
+
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """
     Calculate the start and end indexes for pagination.
@@ -21,5 +22,5 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
                          and end index (exclusive) for slicing.
     """
     start = (page - 1) * page_size
-    end =  page_size * page
+    end =  page_size*page
     return (start, end)
