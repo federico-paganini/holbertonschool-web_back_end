@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-from typing import Tuple
 """
 Pagination utility module.
 
@@ -7,6 +6,7 @@ This module provides helper functions for calculating index ranges
 commonly used in paginated data retrieval. It is designed to be
 simple, clear, and reusable across different projects.
 """
+from typing import Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
