@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 """
-pagination.py
-
 Module to paginate a dataset of popular baby names.
 
 Functions:
