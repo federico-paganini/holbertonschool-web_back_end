@@ -60,11 +60,14 @@ class Server:
             page_size (int): Number of items per page. Must be > 0.
 
         Returns:
-            List[List]: A list of rows corresponding to the requested page.
-                        Returns an empty list if the page is out of range.
+            List[List]: A list of rows corresponding to the
+            requested page.
+                        Returns an empty list if the page is
+                        out of range.
 
         Raises:
-            AssertionError: If page or page_size are not integers greater than 0.
+            AssertionError: If page or page_size are not integers
+            greater than 0.
         """
         assert type(page) is int and page > 0
         assert type(page_size) is int and page_size > 0
