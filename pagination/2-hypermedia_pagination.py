@@ -9,16 +9,19 @@ This module implements:
 
 Features:
     • Caches the dataset in memory for performance.
-    • Provides strict input validation (page and page_size must be positive integers).
-    • Supports "hypermedia" pagination with total pages, next/previous page numbers,
-      and page data.
+    • Provides strict input validation (page and page_size must be
+    positive integers).
+
+    • Supports "hypermedia" pagination with total pages, next/previous
+    page numbers, and page data.
 
 Example:
     server = Server()
     page_data = server.get_page(2, 5)
     hyper_info = server.get_hyper(2, 5)
 """
-import csv, math
+import csv
+import math
 from typing import List, Tuple, Dict, Union
 
 
