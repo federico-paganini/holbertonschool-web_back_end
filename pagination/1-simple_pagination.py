@@ -52,6 +52,20 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+        """
+        Return a specific page of the dataset.
+
+        Args:
+            page (int): Page number (1-based index). Must be > 0.
+            page_size (int): Number of items per page. Must be > 0.
+
+        Returns:
+            List[List]: A list of rows corresponding to the requested page.
+                        Returns an empty list if the page is out of range.
+
+        Raises:
+            AssertionError: If page or page_size are not integers greater than 0.
+        """
         assert type(page) is int and page > 0
         assert type(page_size) is int and page_size > 0
 
