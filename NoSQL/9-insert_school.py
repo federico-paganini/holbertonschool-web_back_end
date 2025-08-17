@@ -23,6 +23,9 @@ def insert_school(mongo_collection, **kwargs) -> str:
     Returns:
         str: The ObjectId of the inserted document as a string.
     """
+    if len(kwargs) == 0:
+        return None
+    
     data = dict(**kwargs)
     result = mongo_collection.insert_one(data)
     return str(result.inserted_id)
