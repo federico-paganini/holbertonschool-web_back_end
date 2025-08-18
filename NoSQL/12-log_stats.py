@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
+"""
+This module connects to a MongoDB database and analyzes the 'nginx' logs collection.
+It provides a summary of the total number of log entries, a breakdown of requests
+by HTTP method (GET, POST, PUT, PATCH, DELETE), and counts how many GET requests
+were made specifically to the '/status' endpoint.
+
+"""
 from pymongo import MongoClient
-"""
-Script to count documents in nginx logs collection and show breakdown by HTTP method.
-"""
 
 
 if __name__ == "__main__":
