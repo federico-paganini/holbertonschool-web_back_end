@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 from pymongo import MongoClient
+"""
+Script to count documents in nginx logs collection and show breakdown by HTTP method.
+"""
+
 
 if __name__ == "__main__":
     client = MongoClient('mongodb://127.0.0.1:27017')
