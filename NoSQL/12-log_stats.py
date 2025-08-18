@@ -6,6 +6,7 @@ Script to count documents in nginx logs collection and show breakdown by HTTP me
 
 
 if __name__ == "__main__":
+    """Checks all elements in a pymongo collection"""
     client = MongoClient('mongodb://127.0.0.1:27017')
     nginx_collection = client.logs.nginx
 
