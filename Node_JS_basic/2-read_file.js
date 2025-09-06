@@ -9,7 +9,6 @@ function countStudents(path) {
     throw new Error('Cannot load the database');
   }
 
-  // separar por líneas y eliminar líneas vacías
   const lines = data.split('\n').filter(line => line.trim() !== '');
   
   if (lines.length === 0) {
@@ -17,7 +16,6 @@ function countStudents(path) {
     return;
   }
 
-  // descartar header
   const students = lines.slice(1);
 
   const fields = {};
