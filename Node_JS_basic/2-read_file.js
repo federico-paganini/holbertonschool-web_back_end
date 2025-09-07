@@ -9,8 +9,8 @@ function countStudents(path) {
     throw new Error('Cannot load the database');
   }
 
-  const lines = data.split('\n').filter(line => line.trim() !== '');
-  
+  const lines = data.split('\n').filter((line) => line.trim() !== '');
+
   if (lines.length === 0) {
     console.log('Number of students: 0');
     return;
@@ -20,7 +20,7 @@ function countStudents(path) {
 
   const fields = {};
 
-  students.forEach(student => {
+  students.forEach((student) => {
     const cols = student.split(',');
     const firstname = cols[0].trim();
     const field = cols[3].trim();
@@ -32,7 +32,11 @@ function countStudents(path) {
   console.log(`Number of students: ${total}`);
 
   for (const [field, names] of Object.entries(fields)) {
-    console.log(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`);
+    console.log(
+      `Number of students in ${field}: ${names.length}. List: ${names.join(
+        ', '
+      )}`
+    );
   }
 }
 
