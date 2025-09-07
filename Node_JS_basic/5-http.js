@@ -4,10 +4,6 @@ const countStudents = require('./3-read_file_async');
 const database = process.argv[2];
 
 const app = http.createServer((_, res) => {
-  const sendResponse = (data) => {
-    res.write(data);
-  };
-
   res.writeHead(200, { 'Content-Type': 'text/plain' });
 
   if (_.url === '/') {
@@ -17,7 +13,7 @@ const app = http.createServer((_, res) => {
 
     const originalLog = console.log;
     console.log = (...args) => {
-      res.write(args.join(' ') + '\n');
+      res.write(`${args.join(' ')}\n`);
     };
 
     countStudents(database)
@@ -26,7 +22,6 @@ const app = http.createServer((_, res) => {
         res.end();
       })
       .catch(() => {
-        console.log = originalLog;
         res.end('Cannot load the database');
       });
   } else {
