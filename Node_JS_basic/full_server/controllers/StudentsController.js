@@ -6,10 +6,11 @@ class StudentsController {
 
     try {
       const studentsByField = await readDatabase(file);
-
+      /* eslint-disable */
       const sortedFields = Object.keys(studentsByField).sort((a, b) =>
         a.toLowerCase().localeCompare(b.toLowerCase()),
       );
+      /* eslint-disable */
 
       let message = 'This is the list of our students\n';
 
@@ -26,7 +27,7 @@ class StudentsController {
 
   static async getAllStudentsByMajor(req, res) {
     const file = process.argv[2];
-    const major = req.params.major;
+    const { major } = req.params;
 
     if (major !== 'CS' && major !== 'SWE') {
       res.status(500).send('Major parameter must be CS or SWE');

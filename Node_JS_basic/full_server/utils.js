@@ -7,7 +7,7 @@ async function readDatabase(filePath) {
 
     const studentsByField = {};
 
-    for (let i = 1; i < lines.length; i++) {
+    for (let i = 1; i < lines.length; i += 1) {
       const fields = lines[i].split(',');
       const firstname = fields[0].trim();
       const field = fields[3].trim();
