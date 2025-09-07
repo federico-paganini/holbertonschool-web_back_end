@@ -30,7 +30,7 @@ class StudentsController {
     const { major } = req.params;
 
     if (major !== 'CS' && major !== 'SWE') {
-      res.status(500).send('Major parameter must be CS or SWE');
+      return res.status(500).send('Major parameter must be CS or SWE');
     }
 
     try {
