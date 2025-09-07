@@ -44,7 +44,7 @@ function countStudents(path) {
         );
       }
     })
-    .catch((err) => {
+    .catch(() => {
       throw new Error('Cannot load the database');
     });
 }
