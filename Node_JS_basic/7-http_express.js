@@ -22,7 +22,7 @@ app.get('/students', async (_, res) => {
     await countStudents(file);
     console.log = originalLog;
     res.end();
-  } catch {
+  } catch (_err) {
     res.end('Cannot load the database');
   }
 });
