@@ -35,11 +35,11 @@ class StudentsController {
     try {
       const data = await readDatabase(file);
       if (!data[major]) {
-        res.status(200).send('List: ');
+        return res.status(200).send('List: ');
       }
-      res.status(200).send(`List: ${data[major].join(', ')}`);
+      return res.status(200).send(`List: ${data[major].join(', ')}`);
     } catch (_err) {
-      res.status(500).send('Cannot load the database');
+      return res.status(500).send('Cannot load the database');
     }
   }
 }
